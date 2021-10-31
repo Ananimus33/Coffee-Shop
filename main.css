@@ -1,4 +1,4 @@
-.main-background{
+body{
     background-color: rgb(157, 149, 135);
 }
 .hat{
@@ -36,6 +36,7 @@
 .desk-segment{
     background-color: rgb(233, 219, 194);
     height: 1000px;
+    flex: 1;
 }
 
 .desk-segment_photo-galery{
@@ -47,34 +48,32 @@
 }
 
 .desk-segment_photo-galery_photo{
+    max-width: fit-content;
     width: 450px;
     height: 630px;
     float: right;
 }
 
-.bio-text{
+.desk-text{
     width: 75%;
-    height: 660px;
-}
-.bio-text-name, .bio-text-short{
-    text-align: center;
-    font-size: 40px;
-}
-
-.bio-text-name{
+    height: 410px;
     padding-top: 250px;
 }
+#name, #slogan{
+    text-align: center;
+    font-size: 45px;
+}
 
-.bio-text-full{
+.desk-text-full{
     padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
     height: 320px;
     width: 65%;
 }
-.bio-text-full_text{
+#desk-text-full_text{
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .projects-segment{
@@ -89,25 +88,33 @@
     height: 1000px;
 }
 
-.contacts-title{
-    font-size: 45px;
+#contacts-title{
     text-align: center;
     padding-top: 45px;
+    font-size: 45px;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.wrapper{
+    display: flex;
+    overflow: hidden;
+}
+@media (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+} 
+
+@media (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
 }
 
-.telegram-ram{
-    background-color: none;
-    height: 300px;
-    width: 350px;
-    border-color: rgb(131, 186, 237);
-    border-style: solid;
-}
-
-.telegram-link{
-    background-color: #f44336;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+@media (max-width: 768px) {
+    .container{
+        max-width: none;
+    }
 }
